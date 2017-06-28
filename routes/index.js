@@ -15,6 +15,9 @@ router.post('/', multer({
 }).single('upl'), (req, res) => {
   console.log(req.body);
   console.log(req.file);
+  res.json({
+    file_size: req.file.size
+  });
 });
 
 export default router;
